@@ -5,6 +5,8 @@
 - Repositorio privado: https://github.com/felippepestana/assistente-redes-sociais
 - Branch de implementacao: `codex/fundacao-mvp`
 - PR draft: https://github.com/felippepestana/assistente-redes-sociais/pull/1
+- Milestone Sprint 2: https://github.com/felippepestana/assistente-redes-sociais/milestone/1
+- Issues Sprint 2: https://github.com/felippepestana/assistente-redes-sociais/issues?q=is%3Aissue%20milestone%3A%22Sprint%202%20-%20Persistencia%2C%20Deploy%20e%20Admin%22
 
 ## Notion
 

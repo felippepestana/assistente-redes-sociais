@@ -1,0 +1,21 @@
+name: Feature request
+description: Solicitacao de funcionalidade
+title: "[FEAT] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema de negocio
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Solucao desejada
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterios de aceite

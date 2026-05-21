@@ -1,0 +1,38 @@
+{
+  "title": "Formulario de qualificacao de nome profissional",
+  "version": "2026-05-21",
+  "sections": [
+    {
+      "name": "Identidade",
+      "fields": [
+        { "id": "professionalName", "label": "Nome profissional", "type": "text", "required": true },
+        { "id": "profession", "label": "Profissao", "type": "text", "required": true },
+        { "id": "registration", "label": "Registro profissional", "type": "text", "required": false }
+      ]
+    },
+    {
+      "name": "Oferta",
+      "fields": [
+        { "id": "services", "label": "Servicos/areas de atuacao", "type": "textarea", "required": true },
+        { "id": "targetAudience", "label": "Publico prioritario", "type": "textarea", "required": true }
+      ]
+    },
+    {
+      "name": "Operacao",
+      "fields": [
+        {
+          "id": "channels",
+          "label": "Canais desejados",
+          "type": "multiselect",
+          "options": ["site", "instagram", "facebook", "whatsapp", "google_business", "youtube", "linkedin", "tiktok"]
+        },
+        {
+          "id": "complianceMode",
+          "label": "Modo de compliance",
+          "type": "select",
+          "options": ["general", "advocacy"]
+        }
+      ]
+    }
+  ]
+}

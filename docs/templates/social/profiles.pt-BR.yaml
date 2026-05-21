@@ -1,0 +1,47 @@
+site:
+  pages:
+    - home
+    - sobre
+    - atuacao
+    - publicacoes
+    - faq
+    - contato
+    - privacidade
+    - cookies
+    - termos
+instagram:
+  display_name: "NOME PROFISSIONAL"
+  highlights:
+    - "Sobre"
+    - "Atuacao"
+    - "Perguntas"
+    - "Publicacoes"
+  cta_general: "Fale comigo pelo link."
+  cta_advocacy: "Saiba mais no site e envie sua duvida."
+facebook:
+  about: "Perfil profissional centrado em conteudo, atualizacoes e contato."
+whatsapp_business:
+  display_name: "NOME PROFISSIONAL"
+  about: "Atendimento profissional mediante analise inicial."
+google_business:
+  primary_category: "definir categoria principal"
+  essentials:
+    - telefone
+    - site
+    - horarios
+    - fotos
+    - descricao
+linkedin:
+  headline_formula: "[cargo] | [publico] | [resultado] | [prova]"
+youtube:
+  sections:
+    - "Video de apresentacao"
+    - "Perguntas frequentes"
+    - "Entrevistas"
+    - "Publicacoes"
+tiktok:
+  pillars:
+    - "mitos e verdades"
+    - "erros comuns"
+    - "bastidores"
+    - "cortes de videos longos"

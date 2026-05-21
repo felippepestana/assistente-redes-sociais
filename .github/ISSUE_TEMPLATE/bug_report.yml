@@ -1,0 +1,27 @@
+name: Bug report
+description: Reporte um defeito
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Resumo
+      description: Descreva o problema.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Ambiente
+      placeholder: local / staging / producao
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado

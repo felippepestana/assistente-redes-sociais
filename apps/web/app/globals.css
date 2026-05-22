@@ -415,6 +415,79 @@ button {
   font-size: 0.92rem;
 }
 
+.cookie-banner {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 30;
+  width: min(620px, calc(100% - 40px));
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.cookie-banner p,
+.cookie-modal-panel p,
+.cookie-option span span {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.cookie-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(24, 33, 31, 0.42);
+}
+
+.cookie-modal-panel {
+  width: min(560px, 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: var(--shadow);
+}
+
+.cookie-modal-panel h2 {
+  margin: 0;
+  font-size: 1.45rem;
+}
+
+.cookie-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 22px 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.cookie-option > span:first-child {
+  display: grid;
+}
+
 @media (max-width: 900px) {
   .hero-grid,
   .grid-2,
@@ -451,5 +524,16 @@ button {
 
   .form-panel {
     padding: 20px;
+  }
+
+  .cookie-banner {
+    grid-template-columns: 1fr;
+    right: 12px;
+    bottom: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .cookie-actions {
+    justify-content: start;
   }
 }

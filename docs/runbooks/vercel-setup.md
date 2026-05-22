@@ -39,6 +39,7 @@ Configurar em Preview e Production:
 3. Validar homepage e `/contato`.
 4. Testar formulario de contato.
 5. Confirmar que segredos nao aparecem no bundle cliente.
+6. Confirmar que GA4, GTM e Meta Pixel so carregam apos aceite de analytics.
 
 ## Observacao
 

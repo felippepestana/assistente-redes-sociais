@@ -11,4 +11,4 @@ Milestone: [Sprint 2 - Persistencia, Deploy e Admin](https://github.com/felippep
 | [#6](https://github.com/felippepestana/assistente-redes-sociais/issues/6) | Cookies e analytics | implementada nesta branch |
 | [#7](https://github.com/felippepestana/assistente-redes-sociais/issues/7) | Revisao legal e advocacy | implementada nesta branch |
 | [#8](https://github.com/felippepestana/assistente-redes-sociais/issues/8) | Webhook CRM/atendimento | pronta para especificacao |
-| [#9](https://github.com/felippepestana/assistente-redes-sociais/issues/9) | Seguranca, backup e monitoramento | pronta para desenvolvimento |
+| [#9](https://github.com/felippepestana/assistente-redes-sociais/issues/9) | Seguranca, backup e monitoramento | implementada nesta branch |

@@ -9,6 +9,7 @@ Criar o backend real de persistencia para qualificacoes, leads, eventos e anexos
 - Projeto Supabase criado.
 - Acesso de owner/admin ao projeto.
 - `SUPABASE_ACCESS_TOKEN` ou login interativo na CLI.
+- `PROJECT_REF` do projeto Supabase.
 
 ## Passos
 
@@ -16,11 +17,23 @@ Criar o backend real de persistencia para qualificacoes, leads, eventos e anexos
 2. Copiar `Project URL` para `NEXT_PUBLIC_SUPABASE_URL`.
 3. Copiar `anon public` para `NEXT_PUBLIC_SUPABASE_ANON_KEY`.
 4. Copiar `service_role` para `SUPABASE_SERVICE_ROLE_KEY`.
-5. Aplicar `supabase/migrations/0001_initial_schema.sql`.
-6. Confirmar que o bucket `professional-assets` esta privado.
-7. Se houver CRM/atendimento, configurar `LEAD_WEBHOOK_URL` e `LEAD_WEBHOOK_SECRET` no provedor de deploy.
-8. Testar `POST /api/qualification`, `POST /api/contact` e `POST /api/events`.
-9. Criar pelo menos um usuario autorizado em Supabase Auth para acessar `/admin`.
+5. Vincular a CLI ao projeto e aplicar migrations:
+
+```bash
+pnpm dlx supabase login
+pnpm dlx supabase link --project-ref "<PROJECT_REF>"
+pnpm dlx supabase db push
+```
+
+6. Conferir se a tabela `leads` contem colunas de webhook:
+   - `webhook_status`
+   - `webhook_attempts`
+   - `webhook_attempted_at`
+   - `webhook_error`
+7. Confirmar que o bucket `professional-assets` esta privado.
+8. Se houver CRM/atendimento, configurar `LEAD_WEBHOOK_URL` e `LEAD_WEBHOOK_SECRET` no provedor de deploy.
+9. Testar `POST /api/qualification`, `POST /api/contact` e `POST /api/events`.
+10. Criar pelo menos um usuario autorizado em Supabase Auth para acessar `/admin`.
 
 ## Validacao
 
@@ -29,6 +42,7 @@ pnpm lint
 pnpm typecheck
 pnpm test
 pnpm build
+pnpm doctor:deploy
 ```
 
 Depois de configurar as variaveis, respostas das APIs devem retornar `storage: "supabase"` em vez de `storage: "not_configured"`.

@@ -6,6 +6,8 @@
 - Root directory: `apps/web`
 - Install command: `pnpm install --frozen-lockfile`
 - Build command: `pnpm --filter @assistente-redes-sociais/web build`
+- Production branch: `main`
+- Preview branch atual: `codex/fundacao-mvp`
 
 ## Variaveis
 
@@ -21,6 +23,20 @@ Configure em Preview e Production:
 - `GTM_CONTAINER_ID`
 - `META_PIXEL_ID`
 - `INTERNAL_EVENT_SECRET`
+- `LEAD_WEBHOOK_URL`
+- `LEAD_WEBHOOK_SECRET`
+
+## CLI
+
+```bash
+pnpm dlx vercel login
+pnpm dlx vercel link
+pnpm dlx vercel env pull apps/web/.env.local
+pnpm dlx vercel
+```
+
+No dashboard, selecione `apps/web` como Root Directory para o projeto do monorepo. Apos alterar variaveis na Vercel, gere
+novo preview para que os valores entrem no deployment.
 
 ## Git
 

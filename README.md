@@ -36,6 +36,7 @@ pnpm lint
 pnpm typecheck
 pnpm test
 pnpm build
+pnpm doctor:deploy
 ```
 
 ## Estrutura
@@ -60,3 +61,9 @@ Crie as variaveis do `.env.example` em desenvolvimento e na Vercel. As rotas fun
 - templates sociais respeitando `general` e `advocacy`;
 - migracao Supabase com RLS revisada;
 - CI e PR draft ativos no GitHub.
+
+## Desbloqueio De Deploy
+
+Use `pnpm doctor:deploy` para conferir arquivos, variaveis e CLIs antes de aplicar Supabase, Vercel e Google Drive.
+O comando nao imprime segredos; ele apenas informa se as variaveis esperadas estao presentes no ambiente local.
+Use `pnpm doctor:deploy -- --strict` quando quiser que pendencias gerem exit code diferente de zero.

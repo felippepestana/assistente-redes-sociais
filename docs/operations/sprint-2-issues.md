@@ -6,7 +6,7 @@ Milestone: [Sprint 2 - Persistencia, Deploy e Admin](https://github.com/felippep
 |---|---|---|
 | [#2](https://github.com/felippepestana/assistente-redes-sociais/issues/2) | Supabase, migracao e storage privado | bloqueada por credenciais |
 | [#3](https://github.com/felippepestana/assistente-redes-sociais/issues/3) | Vercel e preview do PR | bloqueada por login/token |
-| [#4](https://github.com/felippepestana/assistente-redes-sociais/issues/4) | Area admin protegida | pronta para desenvolvimento |
+| [#4](https://github.com/felippepestana/assistente-redes-sociais/issues/4) | Area admin protegida | implementada nesta branch |
 | [#5](https://github.com/felippepestana/assistente-redes-sociais/issues/5) | Google Drive operacional | bloqueada por ferramenta/permissao |
 | [#6](https://github.com/felippepestana/assistente-redes-sociais/issues/6) | Cookies e analytics | implementada nesta branch |
 | [#7](https://github.com/felippepestana/assistente-redes-sociais/issues/7) | Revisao legal e advocacy | pronta para revisao |

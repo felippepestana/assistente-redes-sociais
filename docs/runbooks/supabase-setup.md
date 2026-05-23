@@ -19,6 +19,7 @@ Criar o backend real de persistencia para qualificacoes, leads, eventos e anexos
 5. Aplicar `supabase/migrations/0001_initial_schema.sql`.
 6. Confirmar que o bucket `professional-assets` esta privado.
 7. Testar `POST /api/qualification`, `POST /api/contact` e `POST /api/events`.
+8. Criar pelo menos um usuario autorizado em Supabase Auth para acessar `/admin`.
 
 ## Validacao
 
@@ -30,6 +31,9 @@ pnpm build
 ```
 
 Depois de configurar as variaveis, respostas das APIs devem retornar `storage: "supabase"` em vez de `storage: "not_configured"`.
+
+A area `/admin` deve aceitar login com usuario do Supabase Auth e bloquear usuarios anonimos.
+Detalhes do fluxo administrativo estao em `docs/runbooks/admin-setup.md`.
 
 ## Cuidados
 

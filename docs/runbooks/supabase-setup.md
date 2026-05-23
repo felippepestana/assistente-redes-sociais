@@ -18,8 +18,9 @@ Criar o backend real de persistencia para qualificacoes, leads, eventos e anexos
 4. Copiar `service_role` para `SUPABASE_SERVICE_ROLE_KEY`.
 5. Aplicar `supabase/migrations/0001_initial_schema.sql`.
 6. Confirmar que o bucket `professional-assets` esta privado.
-7. Testar `POST /api/qualification`, `POST /api/contact` e `POST /api/events`.
-8. Criar pelo menos um usuario autorizado em Supabase Auth para acessar `/admin`.
+7. Se houver CRM/atendimento, configurar `LEAD_WEBHOOK_URL` e `LEAD_WEBHOOK_SECRET` no provedor de deploy.
+8. Testar `POST /api/qualification`, `POST /api/contact` e `POST /api/events`.
+9. Criar pelo menos um usuario autorizado em Supabase Auth para acessar `/admin`.
 
 ## Validacao
 
@@ -34,6 +35,7 @@ Depois de configurar as variaveis, respostas das APIs devem retornar `storage: "
 
 A area `/admin` deve aceitar login com usuario do Supabase Auth e bloquear usuarios anonimos.
 Detalhes do fluxo administrativo estao em `docs/runbooks/admin-setup.md`.
+Detalhes do webhook de atendimento estao em `docs/runbooks/crm-webhook.md`.
 
 ## Cuidados
 

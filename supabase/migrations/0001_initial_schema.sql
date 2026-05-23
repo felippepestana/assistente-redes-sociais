@@ -66,6 +66,10 @@ create table if not exists leads (
   channel channel not null default 'site',
   status text not null default 'new',
   consent jsonb not null,
+  webhook_status text not null default 'disabled' check (webhook_status in ('disabled', 'sent', 'failed')),
+  webhook_attempts integer not null default 0,
+  webhook_attempted_at timestamptz,
+  webhook_error text,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );

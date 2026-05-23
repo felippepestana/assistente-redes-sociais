@@ -82,8 +82,35 @@ export const LeadSchema = z.object({
 });
 export type Lead = z.infer<typeof LeadSchema>;
 
+export const LeadWebhookPayloadSchema = z.object({
+  event: z.literal("lead.created"),
+  version: z.literal("2026-05-23"),
+  idempotencyKey: z.string().min(1),
+  sentAt: z.string().datetime(),
+  lead: z.object({
+    id: z.string().uuid().optional(),
+    name: z.string().min(2),
+    email: z.string().email(),
+    phone: z.string().optional(),
+    message: z.string().min(10),
+    source: z.string(),
+    channel: ChannelSchema,
+    status: LeadStatusSchema,
+    consentPolicyVersion: z.string(),
+    createdAt: z.string().datetime().optional()
+  })
+});
+export type LeadWebhookPayload = z.infer<typeof LeadWebhookPayloadSchema>;
+
 export const AnalyticsEventSchema = z.object({
-  eventName: z.enum(["page_view", "whatsapp_click", "qualification_submit", "contact_submit"]),
+  eventName: z.enum([
+    "page_view",
+    "whatsapp_click",
+    "qualification_submit",
+    "contact_submit",
+    "lead_webhook_sent",
+    "lead_webhook_failed"
+  ]),
   source: z.string().default("site"),
   path: z.string().optional(),
   metadata: z.record(z.string(), z.unknown()).default({})

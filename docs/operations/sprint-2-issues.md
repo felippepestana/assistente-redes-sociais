@@ -10,5 +10,5 @@ Milestone: [Sprint 2 - Persistencia, Deploy e Admin](https://github.com/felippep
 | [#5](https://github.com/felippepestana/assistente-redes-sociais/issues/5) | Google Drive operacional | bloqueada por ferramenta/permissao |
 | [#6](https://github.com/felippepestana/assistente-redes-sociais/issues/6) | Cookies e analytics | implementada nesta branch |
 | [#7](https://github.com/felippepestana/assistente-redes-sociais/issues/7) | Revisao legal e advocacy | implementada nesta branch |
-| [#8](https://github.com/felippepestana/assistente-redes-sociais/issues/8) | Webhook CRM/atendimento | pronta para especificacao |
+| [#8](https://github.com/felippepestana/assistente-redes-sociais/issues/8) | Webhook CRM/atendimento | implementada nesta branch |
 | [#9](https://github.com/felippepestana/assistente-redes-sociais/issues/9) | Seguranca, backup e monitoramento | implementada nesta branch |

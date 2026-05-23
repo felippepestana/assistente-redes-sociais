@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { CURRENT_POLICY_VERSION } from "./compliance";
 
 export const ComplianceModeSchema = z.enum(["general", "advocacy"]);
 export type ComplianceMode = z.infer<typeof ComplianceModeSchema>;
@@ -20,7 +21,7 @@ export type ProfileStatus = z.infer<typeof ProfileStatusSchema>;
 
 export const ConsentSchema = z.object({
   accepted: z.literal(true),
-  policyVersion: z.string().default("2026-05-21"),
+  policyVersion: z.string().default(CURRENT_POLICY_VERSION),
   acceptedAt: z.string().datetime().optional()
 });
 export type Consent = z.infer<typeof ConsentSchema>;

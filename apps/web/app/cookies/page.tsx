@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CURRENT_POLICY_VERSION } from "@assistente-redes-sociais/shared";
 import { CookiePreferencesButton } from "@/components/cookie-consent";
 
 export const metadata: Metadata = {
@@ -11,7 +12,10 @@ export default function CookiesPage() {
       <div className="container legal-content">
         <div className="page-title">
           <h1>Politica de Cookies</h1>
-          <p>Versao inicial para registrar categorias e preferencias antes da ativacao plena de analytics e pixels.</p>
+          <p>
+            Versao {CURRENT_POLICY_VERSION}. Minuta para registrar categorias e preferencias antes da ativacao plena de
+            analytics e pixels.
+          </p>
         </div>
         <p>
           O site pode usar cookies essenciais para funcionamento e, quando configurado, tecnologias de mensuracao como
@@ -30,6 +34,10 @@ export default function CookiesPage() {
         <p>
           Cookies essenciais ficam ativos para formularios, seguranca e navegacao. Analytics e pixels so sao carregados
           quando a preferencia permite.
+        </p>
+        <p>
+          A configuracao deve oferecer informacao clara, possibilidade de mudar preferencias e registro da escolha feita.
+          Novas ferramentas de rastreamento devem ser adicionadas a esta pagina antes de serem ativadas.
         </p>
         <CookiePreferencesButton />
       </div>

@@ -1,4 +1,4 @@
-import { AnalyticsEventSchema, QualificationSubmissionSchema } from "@assistente-redes-sociais/shared";
+import { AnalyticsEventSchema, CURRENT_POLICY_VERSION, QualificationSubmissionSchema } from "@assistente-redes-sociais/shared";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { getAssetsBucketName, getSupabaseAdmin } from "@/lib/supabase";
@@ -94,6 +94,7 @@ async function parseQualificationRequest(request: Request) {
       positioningNotes: getOptionalString(formData, "positioningNotes"),
       consent: {
         accepted: formData.get("consent") === "true",
+        policyVersion: getString(formData, "policyVersion") || CURRENT_POLICY_VERSION,
         acceptedAt: new Date().toISOString()
       },
       attachments: files.map((file) => ({

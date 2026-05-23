@@ -1,5 +1,6 @@
 "use client";
 
+import { CURRENT_POLICY_VERSION } from "@assistente-redes-sociais/shared";
 import { Send } from "lucide-react";
 import { useState } from "react";
 
@@ -24,6 +25,7 @@ export function ContactForm() {
       channel: "site",
       consent: {
         accepted: formData.get("consent") === "on",
+        policyVersion: CURRENT_POLICY_VERSION,
         acceptedAt: new Date().toISOString()
       }
     };

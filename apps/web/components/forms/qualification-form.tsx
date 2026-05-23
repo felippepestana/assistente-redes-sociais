@@ -1,5 +1,6 @@
 "use client";
 
+import { CURRENT_POLICY_VERSION } from "@assistente-redes-sociais/shared";
 import { Send } from "lucide-react";
 import { useState } from "react";
 
@@ -28,6 +29,7 @@ export function QualificationForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     formData.set("consent", formData.get("consent") === "on" ? "true" : "false");
+    formData.set("policyVersion", CURRENT_POLICY_VERSION);
 
     const response = await fetch("/api/qualification", {
       method: "POST",

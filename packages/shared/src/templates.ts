@@ -1,4 +1,5 @@
 import type { Channel, ComplianceMode, ProfessionalProfile } from "./schemas";
+import { getSafeCallToAction } from "./compliance";
 
 export type SocialProfileTemplate = {
   platform: Channel;
@@ -7,11 +8,6 @@ export type SocialProfileTemplate = {
   bio: string;
   callToAction: string;
   checklist: string[];
-};
-
-const neutralCtas: Record<ComplianceMode, string> = {
-  general: "Fale comigo pelo site ou WhatsApp.",
-  advocacy: "Saiba mais no site e envie sua duvida para analise inicial."
 };
 
 const channelLabels: Record<Channel, string> = {
@@ -26,7 +22,7 @@ const channelLabels: Record<Channel, string> = {
 };
 
 export function getComplianceCallToAction(mode: ComplianceMode) {
-  return neutralCtas[mode];
+  return getSafeCallToAction(mode);
 }
 
 export function buildSocialProfileTemplates(profile: ProfessionalProfile): SocialProfileTemplate[] {
@@ -66,7 +62,13 @@ function buildChecklist(platform: Channel, mode: ComplianceMode) {
 
   const complianceItems =
     mode === "advocacy"
-      ? ["evitar promessa de resultado", "evitar CTA de urgencia ou apelo comercial"]
+      ? [
+          "manter publicidade sobria, discreta e informativa",
+          "evitar promessa de resultado",
+          "evitar CTA de urgencia ou apelo comercial",
+          "evitar mencao a preco, gratuidade, desconto ou promocao",
+          "revisar credenciais e titulos antes de publicar"
+        ]
       : ["alinhar CTA ao funil comercial", "definir oferta principal"];
 
   return [...base, ...platformItems[platform], ...complianceItems];
